@@ -7,12 +7,13 @@ import {CustomButtonProps} from '@/types'
 const CustomButton: FC<CustomButtonProps> = ({
   title,
   containerStyles,
+  btnType = 'button',
   handleClick,
 }) => {
   return (
     <button
       disabled={false}
-      type="button"
+      type={btnType}
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
     >
